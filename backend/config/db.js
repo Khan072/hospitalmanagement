@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const connectDB = async () => {
   try {
-    await mongoose.connect("mongodb://127.0.0.1:27017/hospitalDB", {
+    await mongoose.connect("mongodb+srv://mdaabidkhan28_db_user:3fTbPd78RxlqjJE3@cluster0.xig1bxy.mongodb.net/hospitalDB", {
       // Options to prevent schema validation issues
       bufferCommands: false,
     });
