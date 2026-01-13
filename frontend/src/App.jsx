@@ -240,7 +240,7 @@ function App() {
       const fullPhoneNumber = `${selectedCountryCode}${phoneNumber}`
       const doctorid = selectedDoctor.id
       
-      const response = await fetch('http://localhost:5000/api/appointments/book', {
+      const response = await fetch('https://hospitalmanagement-1pi6.onrender.com/api/appointments/book', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -304,7 +304,7 @@ function App() {
     try {
       // Use the exact format that was used when booking (with country code)
       const fullPhoneNumber = `${checkCountryCode}${checkPhone}`
-      const url = `http://localhost:5000/api/appointments/search?patiantname=${encodeURIComponent(checkName.trim())}&phoneNo=${encodeURIComponent(fullPhoneNumber)}`
+      const url = `https://hospitalmanagement-1pi6.onrender.com/api/appointments/search?patiantname=${encodeURIComponent(checkName.trim())}&phoneNo=${encodeURIComponent(fullPhoneNumber)}`
       
       console.log('Fetching appointments from:', url)
       console.log('Search params:', { name: checkName.trim(), phone: fullPhoneNumber })
